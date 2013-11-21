@@ -1,5 +1,10 @@
-Rijksdriehoekscoördinaten
+Rijksdriehoek coordinates
 =========================
+
+This app converts cordinates between WGS84 (EPSG:4326) and RD (EPSG:28992).
+Dutch description and screenshot below:
+
+
 
 Met deze app is het kinderlijk eenvoudig om Nederlandse coördinaten op de kaart op te zoeken. Geen gedoe meer met topografische kaarten en kaarthoekmeters, maar gewoon direct resultaat.
 
