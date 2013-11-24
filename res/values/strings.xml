@@ -2,8 +2,24 @@
 <resources>
 
     <string name="app_name">Rijksdriehoekscoördinaten</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Voorkeuren</string>
     <string name="aerial">Luchtfoto</string>
     <string name="map">Kaart</string>
+    <string name="pref_format">Coördinaat-formaat</string>
+    <string name="pref_format_default">Scouting</string>
+
+    <string-array name="pref_format_entries">
+        <item>Scouting</item>
+        <item>Kadaster</item>
+    </string-array>
+
+    <string name="pref_map_type">Soort kaart</string>
+    <string name="pref_map_type_default">Kaart</string>
+
+    <string-array name="pref_map_type_entries">
+        <item>Kaart</item>
+        <item>Luchtfoto</item>
+        <item>Topografisch</item>
+        </string-array>
 
 </resources>

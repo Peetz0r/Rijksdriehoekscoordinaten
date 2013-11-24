@@ -25,7 +25,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.Rijksdriehoekscoordinaten"
+            android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
             <intent-filter>
@@ -33,6 +33,20 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceActivity"
+            android:parentActivityName="nl.haas_en_berg.rijksdriehoekscoordinaten.RDActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nl.haas_en_berg.rijksdriehoekscoordinaten.RDActivity" />
+        </activity>
+        <activity
+            android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceFragmentActivity"
+            android:parentActivityName="nl.haas_en_berg.rijksdriehoekscoordinaten.RDActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nl.haas_en_berg.rijksdriehoekscoordinaten.RDActivity" />
         </activity>
 
         <meta-data
