@@ -20,5 +20,7 @@
         <item>Luchtfoto</item>
         <item>Topografisch</item>
         </string-array>
+        
+    <string name="generic_error">Er gaat iets mis.</string>
 
 </resources>

@@ -112,7 +112,7 @@ public class RDMainFragment extends Fragment
 			}
 			else
 			{
-				Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+				Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 				getActivity().finish();
 			}
 		}
@@ -124,7 +124,7 @@ public class RDMainFragment extends Fragment
 			// double-check if this is successful
 			if (googleMap == null)
 			{
-				Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+				Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 				getActivity().finish();
 			}
 			else
@@ -177,7 +177,7 @@ public class RDMainFragment extends Fragment
 								// displaying another location to the user might
 								// be confusing, so instead, we finish our
 								// Activity and inform the user
-								Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+								Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 								getActivity().finish();
 							}
 							
@@ -205,7 +205,7 @@ public class RDMainFragment extends Fragment
 							// displaying another location to the user might
 							// be confusing, so instead, we finish our
 							// Activity and inform the user
-							Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+							Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 							getActivity().finish();
 						}
 					}
@@ -226,7 +226,7 @@ public class RDMainFragment extends Fragment
 								// displaying another location to the user might
 								// be confusing, so instead, we finish our
 								// Activity and inform the user
-								Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+								Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 								getActivity().finish();
 							}
 						}
@@ -237,7 +237,7 @@ public class RDMainFragment extends Fragment
 							// displaying another location to the user might
 							// be confusing, so instead, we finish our
 							// Activity and inform the user
-							Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+							Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 							getActivity().finish();
 						}
 					}
