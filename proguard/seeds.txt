@@ -1,0 +1,438 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment: Fragment()
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentActivity: FragmentActivity()
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
+android.support.v4.app.FragmentTabHost$SavedState
+android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
+android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
+android.support.v4.view.PagerTabStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.PagerTabStrip: void setBackgroundColor(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundResource(int)
+android.support.v4.view.PagerTabStrip: void setDrawFullUnderline(boolean)
+android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
+android.support.v4.view.PagerTabStrip: int getMinHeight()
+android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
+android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTitleStrip: int getTextSpacing()
+android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
+android.support.v4.view.PagerTitleStrip: void setTextColor(int)
+android.support.v4.view.PagerTitleStrip: void setGravity(int)
+android.support.v4.view.PagerTitleStrip: int getMinHeight()
+android.support.v4.view.ViewPager: void setScrollState(int)
+android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+android.support.v4.view.ViewPager: int getClientWidth()
+android.support.v4.view.ViewPager: void setCurrentItem(int)
+android.support.v4.view.ViewPager: int getCurrentItem()
+android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: void setChildrenDrawingOrderEnabledCompat(boolean)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
+android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
+android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
+android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.DrawerLayout: void setScrimColor(int)
+android.support.v4.widget.DrawerLayout: void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener)
+android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int)
+android.support.v4.widget.DrawerLayout$SavedState
+android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
+android.support.v4.widget.SlidingPaneLayout: int getParallaxDistance()
+android.support.v4.widget.SlidingPaneLayout: void setSliderFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getSliderFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setCoveredFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getCoveredFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
+android.support.v4.widget.SlidingPaneLayout$SavedState
+android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode[] values()
+com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode valueOf(java.lang.String)
+com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender[] values()
+com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender valueOf(java.lang.String)
+com.google.android.gms.R$attr: int adSize
+com.google.android.gms.R$attr: int adUnitId
+com.google.android.gms.R$attr: int cameraBearing
+com.google.android.gms.R$attr: int cameraTargetLat
+com.google.android.gms.R$attr: int cameraTargetLng
+com.google.android.gms.R$attr: int cameraTilt
+com.google.android.gms.R$attr: int cameraZoom
+com.google.android.gms.R$attr: int mapType
+com.google.android.gms.R$attr: int uiCompass
+com.google.android.gms.R$attr: int uiRotateGestures
+com.google.android.gms.R$attr: int uiScrollGestures
+com.google.android.gms.R$attr: int uiTiltGestures
+com.google.android.gms.R$attr: int uiZoomControls
+com.google.android.gms.R$attr: int uiZoomGestures
+com.google.android.gms.R$attr: int useViewLifecycle
+com.google.android.gms.R$attr: int zOrderOnTop
+com.google.android.gms.R$color: int common_action_bar_splitter
+com.google.android.gms.R$color: int common_signin_btn_dark_text_default
+com.google.android.gms.R$color: int common_signin_btn_dark_text_disabled
+com.google.android.gms.R$color: int common_signin_btn_dark_text_focused
+com.google.android.gms.R$color: int common_signin_btn_dark_text_pressed
+com.google.android.gms.R$color: int common_signin_btn_default_background
+com.google.android.gms.R$color: int common_signin_btn_light_text_default
+com.google.android.gms.R$color: int common_signin_btn_light_text_disabled
+com.google.android.gms.R$color: int common_signin_btn_light_text_focused
+com.google.android.gms.R$color: int common_signin_btn_light_text_pressed
+com.google.android.gms.R$color: int common_signin_btn_text_dark
+com.google.android.gms.R$color: int common_signin_btn_text_light
+com.google.android.gms.R$drawable: int common_signin_btn_icon_dark
+com.google.android.gms.R$drawable: int common_signin_btn_icon_disabled_dark
+com.google.android.gms.R$drawable: int common_signin_btn_icon_disabled_focus_dark
+com.google.android.gms.R$drawable: int common_signin_btn_icon_disabled_focus_light
+com.google.android.gms.R$drawable: int common_signin_btn_icon_disabled_light
+com.google.android.gms.R$drawable: int common_signin_btn_icon_focus_dark
+com.google.android.gms.R$drawable: int common_signin_btn_icon_focus_light
+com.google.android.gms.R$drawable: int common_signin_btn_icon_light
+com.google.android.gms.R$drawable: int common_signin_btn_icon_normal_dark
+com.google.android.gms.R$drawable: int common_signin_btn_icon_normal_light
+com.google.android.gms.R$drawable: int common_signin_btn_icon_pressed_dark
+com.google.android.gms.R$drawable: int common_signin_btn_icon_pressed_light
+com.google.android.gms.R$drawable: int common_signin_btn_text_dark
+com.google.android.gms.R$drawable: int common_signin_btn_text_disabled_dark
+com.google.android.gms.R$drawable: int common_signin_btn_text_disabled_focus_dark
+com.google.android.gms.R$drawable: int common_signin_btn_text_disabled_focus_light
+com.google.android.gms.R$drawable: int common_signin_btn_text_disabled_light
+com.google.android.gms.R$drawable: int common_signin_btn_text_focus_dark
+com.google.android.gms.R$drawable: int common_signin_btn_text_focus_light
+com.google.android.gms.R$drawable: int common_signin_btn_text_light
+com.google.android.gms.R$drawable: int common_signin_btn_text_normal_dark
+com.google.android.gms.R$drawable: int common_signin_btn_text_normal_light
+com.google.android.gms.R$drawable: int common_signin_btn_text_pressed_dark
+com.google.android.gms.R$drawable: int common_signin_btn_text_pressed_light
+com.google.android.gms.R$drawable: int ic_plusone_medium_off_client
+com.google.android.gms.R$drawable: int ic_plusone_small_off_client
+com.google.android.gms.R$drawable: int ic_plusone_standard_off_client
+com.google.android.gms.R$drawable: int ic_plusone_tall_off_client
+com.google.android.gms.R$id: int hybrid
+com.google.android.gms.R$id: int none
+com.google.android.gms.R$id: int normal
+com.google.android.gms.R$id: int satellite
+com.google.android.gms.R$id: int terrain
+com.google.android.gms.R$integer: int google_play_services_version
+com.google.android.gms.R$string: int auth_client_needs_enabling_title
+com.google.android.gms.R$string: int auth_client_needs_installation_title
+com.google.android.gms.R$string: int auth_client_needs_update_title
+com.google.android.gms.R$string: int auth_client_play_services_err_notification_msg
+com.google.android.gms.R$string: int auth_client_requested_by_msg
+com.google.android.gms.R$string: int auth_client_using_bad_version_title
+com.google.android.gms.R$string: int common_google_play_services_enable_button
+com.google.android.gms.R$string: int common_google_play_services_enable_text
+com.google.android.gms.R$string: int common_google_play_services_enable_title
+com.google.android.gms.R$string: int common_google_play_services_install_button
+com.google.android.gms.R$string: int common_google_play_services_install_text_phone
+com.google.android.gms.R$string: int common_google_play_services_install_text_tablet
+com.google.android.gms.R$string: int common_google_play_services_install_title
+com.google.android.gms.R$string: int common_google_play_services_invalid_account_text
+com.google.android.gms.R$string: int common_google_play_services_invalid_account_title
+com.google.android.gms.R$string: int common_google_play_services_network_error_text
+com.google.android.gms.R$string: int common_google_play_services_network_error_title
+com.google.android.gms.R$string: int common_google_play_services_unknown_issue
+com.google.android.gms.R$string: int common_google_play_services_unsupported_date_text
+com.google.android.gms.R$string: int common_google_play_services_unsupported_text
+com.google.android.gms.R$string: int common_google_play_services_unsupported_title
+com.google.android.gms.R$string: int common_google_play_services_update_button
+com.google.android.gms.R$string: int common_google_play_services_update_text
+com.google.android.gms.R$string: int common_google_play_services_update_title
+com.google.android.gms.R$string: int common_signin_button_text
+com.google.android.gms.R$string: int common_signin_button_text_long
+com.google.android.gms.R$styleable: int[] AdsAttrs
+com.google.android.gms.R$styleable: int AdsAttrs_adSize
+com.google.android.gms.R$styleable: int AdsAttrs_adUnitId
+com.google.android.gms.R$styleable: int[] MapAttrs
+com.google.android.gms.R$styleable: int MapAttrs_cameraBearing
+com.google.android.gms.R$styleable: int MapAttrs_cameraTargetLat
+com.google.android.gms.R$styleable: int MapAttrs_cameraTargetLng
+com.google.android.gms.R$styleable: int MapAttrs_cameraTilt
+com.google.android.gms.R$styleable: int MapAttrs_cameraZoom
+com.google.android.gms.R$styleable: int MapAttrs_mapType
+com.google.android.gms.R$styleable: int MapAttrs_uiCompass
+com.google.android.gms.R$styleable: int MapAttrs_uiRotateGestures
+com.google.android.gms.R$styleable: int MapAttrs_uiScrollGestures
+com.google.android.gms.R$styleable: int MapAttrs_uiTiltGestures
+com.google.android.gms.R$styleable: int MapAttrs_uiZoomControls
+com.google.android.gms.R$styleable: int MapAttrs_uiZoomGestures
+com.google.android.gms.R$styleable: int MapAttrs_useViewLifecycle
+com.google.android.gms.R$styleable: int MapAttrs_zOrderOnTop
+com.google.android.gms.ads.AdView: com.google.android.gms.ads.AdListener getAdListener()
+com.google.android.gms.ads.AdView: com.google.android.gms.ads.AdSize getAdSize()
+com.google.android.gms.ads.AdView: java.lang.String getAdUnitId()
+com.google.android.gms.ads.AdView: void setAdListener(com.google.android.gms.ads.AdListener)
+com.google.android.gms.ads.AdView: void setAdSize(com.google.android.gms.ads.AdSize)
+com.google.android.gms.ads.AdView: void setAdUnitId(java.lang.String)
+com.google.android.gms.auth.RecoveryDecision
+com.google.android.gms.common.SignInButton: void setSize(int)
+com.google.android.gms.common.SignInButton: void setColorScheme(int)
+com.google.android.gms.common.SignInButton: void setOnClickListener(android.view.View$OnClickListener)
+com.google.android.gms.common.SignInButton: void setEnabled(boolean)
+com.google.android.gms.common.data.d
+com.google.android.gms.common.images.ImageManager$ImageReceiver
+com.google.android.gms.common.internal.safeparcel.SafeParcelable
+com.google.android.gms.games.Game
+com.google.android.gms.games.GameEntity
+com.google.android.gms.games.GameEntity: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.games.Player
+com.google.android.gms.games.PlayerEntity
+com.google.android.gms.games.PlayerEntity: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.games.b
+com.google.android.gms.games.d
+com.google.android.gms.games.multiplayer.Invitation
+com.google.android.gms.games.multiplayer.InvitationEntity
+com.google.android.gms.games.multiplayer.InvitationEntity: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.games.multiplayer.Participant
+com.google.android.gms.games.multiplayer.ParticipantEntity
+com.google.android.gms.games.multiplayer.ParticipantEntity: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.games.multiplayer.b
+com.google.android.gms.games.multiplayer.d
+com.google.android.gms.games.multiplayer.realtime.RealTimeMessage
+com.google.android.gms.games.multiplayer.realtime.RealTimeMessage: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.games.multiplayer.realtime.Room
+com.google.android.gms.games.multiplayer.realtime.RoomEntity
+com.google.android.gms.games.multiplayer.realtime.RoomEntity: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.games.multiplayer.realtime.c
+com.google.android.gms.internal.be
+com.google.android.gms.internal.bh
+com.google.android.gms.internal.bu
+com.google.android.gms.internal.bw
+com.google.android.gms.internal.co
+com.google.android.gms.internal.cq: void setContext(android.content.Context)
+com.google.android.gms.internal.dd
+com.google.android.gms.internal.dr
+com.google.android.gms.internal.dt
+com.google.android.gms.internal.dt$a
+com.google.android.gms.internal.dw$a
+com.google.android.gms.internal.dz
+com.google.android.gms.internal.dz$a
+com.google.android.gms.internal.dz$b
+com.google.android.gms.internal.ec
+com.google.android.gms.internal.en
+com.google.android.gms.internal.fa
+com.google.android.gms.internal.fn
+com.google.android.gms.internal.fq
+com.google.android.gms.internal.fs
+com.google.android.gms.internal.fv
+com.google.android.gms.internal.fv$a
+com.google.android.gms.internal.fv$b
+com.google.android.gms.internal.fv$b$a
+com.google.android.gms.internal.fv$b$b
+com.google.android.gms.internal.fv$c
+com.google.android.gms.internal.fv$d
+com.google.android.gms.internal.fv$f
+com.google.android.gms.internal.fv$g
+com.google.android.gms.internal.fv$h
+com.google.android.gms.internal.v
+com.google.android.gms.internal.x
+com.google.android.gms.location.ActivityRecognitionResult
+com.google.android.gms.location.DetectedActivity
+com.google.android.gms.location.LocationRequest
+com.google.android.gms.maps.GoogleMapOptions
+com.google.android.gms.maps.MapView
+com.google.android.gms.maps.MapView: MapView(android.content.Context)
+com.google.android.gms.maps.MapView: MapView(android.content.Context,android.util.AttributeSet)
+com.google.android.gms.maps.MapView: MapView(android.content.Context,android.util.AttributeSet,int)
+com.google.android.gms.maps.MapView: MapView(android.content.Context,com.google.android.gms.maps.GoogleMapOptions)
+com.google.android.gms.maps.MapView: com.google.android.gms.maps.GoogleMap getMap()
+com.google.android.gms.maps.model.CameraPosition
+com.google.android.gms.maps.model.CircleOptions
+com.google.android.gms.maps.model.GroundOverlayOptions
+com.google.android.gms.maps.model.LatLng
+com.google.android.gms.maps.model.LatLngBounds
+com.google.android.gms.maps.model.MarkerOptions
+com.google.android.gms.maps.model.PolygonOptions
+com.google.android.gms.maps.model.PolylineOptions
+com.google.android.gms.maps.model.Tile
+com.google.android.gms.maps.model.TileOverlayOptions
+com.google.android.gms.maps.model.VisibleRegion
+com.google.android.gms.plus.PlusOneButton: void setOnPlusOneClickListener(com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener)
+com.google.android.gms.plus.PlusOneButton: void setAnnotation(int)
+com.google.android.gms.plus.PlusOneButton: void setSize(int)
+com.google.android.gms.plus.PlusOneButtonWithPopup: void setOnClickListener(android.view.View$OnClickListener)
+com.google.android.gms.plus.PlusOneButtonWithPopup: void setAnnotation(int)
+com.google.android.gms.plus.PlusOneButtonWithPopup: void setSize(int)
+com.google.android.gms.plus.PlusOneButtonWithPopup: android.app.PendingIntent getResolution()
+com.google.android.gms.wallet.Address
+com.google.android.gms.wallet.Address: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.Cart
+com.google.android.gms.wallet.Cart: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.FullWallet
+com.google.android.gms.wallet.FullWallet: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.FullWalletRequest
+com.google.android.gms.wallet.FullWalletRequest: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.LineItem
+com.google.android.gms.wallet.LineItem: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.LoyaltyWalletObject
+com.google.android.gms.wallet.LoyaltyWalletObject: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.MaskedWallet
+com.google.android.gms.wallet.MaskedWallet: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.MaskedWalletRequest
+com.google.android.gms.wallet.MaskedWalletRequest: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.NotifyTransactionStatusRequest
+com.google.android.gms.wallet.NotifyTransactionStatusRequest: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.OfferWalletObject
+com.google.android.gms.wallet.OfferWalletObject: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.wallet.ProxyCard
+com.google.android.gms.wallet.ProxyCard: android.os.Parcelable$Creator CREATOR
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$array: int pref_format_entries
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$array: int pref_map_type_entries
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int adSize
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int adUnitId
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int cameraBearing
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int cameraTargetLat
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int cameraTargetLng
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int cameraTilt
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int cameraZoom
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int mapType
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int uiCompass
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int uiRotateGestures
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int uiScrollGestures
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int uiTiltGestures
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int uiZoomControls
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int uiZoomGestures
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int useViewLifecycle
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int zOrderOnTop
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_action_bar_splitter
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_dark_text_default
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_dark_text_disabled
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_dark_text_focused
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_dark_text_pressed
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_default_background
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_light_text_default
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_light_text_disabled
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_light_text_focused
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_light_text_pressed
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_text_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$color: int common_signin_btn_text_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_disabled_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_disabled_focus_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_disabled_focus_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_disabled_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_focus_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_focus_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_normal_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_normal_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_pressed_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_icon_pressed_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_disabled_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_disabled_focus_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_disabled_focus_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_disabled_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_focus_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_focus_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_normal_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_normal_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_pressed_dark
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int common_signin_btn_text_pressed_light
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int ic_launcher
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int ic_plusone_medium_off_client
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int ic_plusone_small_off_client
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int ic_plusone_standard_off_client
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int ic_plusone_tall_off_client
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$drawable: int ui_background
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int RD_lat
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int RD_lon
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int RD_lon_bg
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int action_preferences
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int action_share
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int fragment_main
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int fragment_rd
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int fragment_sidebar
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int hybrid
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int map
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int none
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int normal
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int satellite
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$id: int terrain
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$integer: int google_play_services_version
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$layout: int main_activity
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$layout: int main_fragment
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$layout: int preference_layout
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$layout: int prefs_activity
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$menu: int main
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int action_preferences
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int action_share
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int app_name
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int auth_client_needs_enabling_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int auth_client_needs_installation_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int auth_client_needs_update_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int auth_client_play_services_err_notification_msg
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int auth_client_requested_by_msg
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int auth_client_using_bad_version_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_enable_button
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_enable_text
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_enable_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_install_button
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_install_text_phone
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_install_text_tablet
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_install_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_invalid_account_text
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_invalid_account_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_network_error_text
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_network_error_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_unknown_issue
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_unsupported_date_text
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_unsupported_text
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_unsupported_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_update_button
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_update_text
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_update_title
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_signin_button_text
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_signin_button_text_long
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int pref_format
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int pref_format_default
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int pref_map_type
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int pref_map_type_default
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$style: int AppBaseTheme
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$style: int AppTheme
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int[] AdsAttrs
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int AdsAttrs_adSize
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int AdsAttrs_adUnitId
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int[] MapAttrs
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_cameraBearing
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_cameraTargetLat
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_cameraTargetLng
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_cameraTilt
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_cameraZoom
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_mapType
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_uiCompass
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_uiRotateGestures
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_uiScrollGestures
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_uiTiltGestures
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_uiZoomControls
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_uiZoomGestures
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_useViewLifecycle
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$styleable: int MapAttrs_zOrderOnTop
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$xml: int preferences
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainActivity
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainActivity: RDMainActivity()
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment: RDMainFragment()
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceActivity
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceActivity: RDPreferenceActivity()
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceFragment
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceFragment: RDPreferenceFragment()
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceFragmentActivity
+nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceFragmentActivity: RDPreferenceFragmentActivity()
