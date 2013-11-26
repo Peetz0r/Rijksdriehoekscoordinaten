@@ -21,6 +21,7 @@
         <item>Terrain</item>
         </string-array>
         
+    <!-- You are not going to space today. -->
     <string name="generic_error">Something went wrong.</string>
 
 </resources>
