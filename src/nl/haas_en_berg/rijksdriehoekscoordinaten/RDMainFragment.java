@@ -157,20 +157,10 @@ public class RDMainFragment extends Fragment
 				LatLng startPosition = null;
 				float startZoom = 16;
 				
-				try
-				{
-					Log.i("Peetz0r", intent.getAction().toString());
-					Log.i("Peetz0r", intent.getDataString().toString());
-				}
-				catch (Exception e)
-				{
-				}
-				
-				// try to get a position from the Activity's Intent
-				if (intent.getAction().equals(Intent.ACTION_VIEW) || intent.getAction().equals(Intent.ACTION_SEND))
+				if (intent.getAction() != null && (intent.getAction().equals(Intent.ACTION_VIEW) || intent.getAction().equals(Intent.ACTION_SEND)))
 				{
 					Uri uri = intent.getData();
-					// geo:52.39494397309149,5.2931031212210655?q=52.39494397309149%2C5.2931031212210655(148595%20-%20489682)&z=16
+					
 					if (uri.getScheme().equals("geo"))
 					{
 						Pattern p = Pattern.compile("geo:(\\d+\\.\\d+),(\\d+\\.\\d+)(?:.*z=(\\d+))?");
@@ -184,7 +174,12 @@ public class RDMainFragment extends Fragment
 							catch (NumberFormatException e)
 							{
 								// This happens when other apps provide a
-								// invalid geo: URI. Let's ignore that
+								// invalid geo: URI. Ignoring this and
+								// displaying another location to the user might
+								// be confusing, so instead, we finish our
+								// Activity and inform the user
+								Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+								getActivity().finish();
 							}
 							
 							// the z parameter in a geo: URI is optional,
@@ -198,11 +193,21 @@ public class RDMainFragment extends Fragment
 								}
 								catch (NumberFormatException e)
 								{
-									// This, again, happens when other apps
-									// provide a invalid geo: URI. Let's, again,
-									// ignore that
+									// This, happens when other apps provide a
+									// partly invalid geo: URI, but since this
+									// is just the zoomlevel, we can ignore this
 								}
 							}
+						}
+						else
+						{
+							// This happens when other apps provide a
+							// invalid geo: URI. Ignoring this and
+							// displaying another location to the user might
+							// be confusing, so instead, we finish our
+							// Activity and inform the user
+							Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+							getActivity().finish();
 						}
 					}
 					else if (uri.getScheme().startsWith("http"))
@@ -217,9 +222,24 @@ public class RDMainFragment extends Fragment
 							}
 							catch (NumberFormatException e)
 							{
-								// This happens when other apps provide a http
-								// URI that I don't really understand
+								// This happens when other apps provide a
+								// invalid geo: URI. Ignoring this and
+								// displaying another location to the user might
+								// be confusing, so instead, we finish our
+								// Activity and inform the user
+								Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+								getActivity().finish();
 							}
+						}
+						else
+						{
+							// This happens when other apps provide a
+							// invalid geo: URI. Ignoring this and
+							// displaying another location to the user might
+							// be confusing, so instead, we finish our
+							// Activity and inform the user
+							Toast.makeText(getActivity(), "Er gaat iets mis.", Toast.LENGTH_LONG).show();
+							getActivity().finish();
 						}
 					}
 				}
@@ -293,7 +313,7 @@ public class RDMainFragment extends Fragment
 			Uri uri = Uri.parse("geo:" + latlon + "?q=" + Uri.encode(latlon + "(" + label + ")") + "&z=" + zoom);
 			
 			// this gives the user a list of apps such as Google Maps
-			Intent shareIntent = new Intent(android.content.Intent.ACTION_VIEW, uri);
+			Intent shareIntent = new Intent(Intent.ACTION_VIEW, uri);
 			startActivity(shareIntent);
 			return true;
 		}
