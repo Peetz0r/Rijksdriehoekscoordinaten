@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rijksdriehoekscoördinaten</string>
+    <string name="action_share">Delen</string>
+    <string name="action_preferences">Voorkeuren</string>
+    <string name="pref_format">Coördinaat-formaat</string>
+    <string name="pref_format_default">Scouting</string>
+
+    <string-array name="pref_format_entries">
+        <item>Scouting</item>
+        <item>Kadaster</item>
+    </string-array>
+
+    <string name="pref_map_type">Soort kaart</string>
+    <string name="pref_map_type_default">Kaart</string>
+
+    <string-array name="pref_map_type_entries">
+        <item>Kaart</item>
+        <item>Luchtfoto</item>
+        <item>Topografisch</item>
+        </string-array>
+        
+    <string name="generic_error">Er gaat iets mis.</string>
+
+</resources>
