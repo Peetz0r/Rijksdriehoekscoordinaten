@@ -37,7 +37,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -93,7 +92,7 @@ public class RDMainFragment extends Fragment
 			{
 				// replace the layout with am empty View, so that we have an
 				// empty background behind the dialog
-				layoutView = null;
+				layoutView = new View(getActivity());
 				
 				// wait for the user to (hopefully read, and) dismiss the
 				// dialog, then finish the activity (and exit our app)

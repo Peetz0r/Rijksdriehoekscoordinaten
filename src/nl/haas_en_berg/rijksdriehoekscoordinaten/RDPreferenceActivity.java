@@ -4,8 +4,6 @@ package nl.haas_en_berg.rijksdriehoekscoordinaten;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.support.v4.app.NavUtils;
-import android.view.MenuItem;
 
 public class RDPreferenceActivity extends PreferenceActivity
 {

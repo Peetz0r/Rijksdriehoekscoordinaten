@@ -66,4 +66,15 @@ public class RDMainActivity extends FragmentActivity
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	@Override
+	public void onBackPressed()
+	{
+		if (fragment_view != null && fragment_view.getVisibility() == View.VISIBLE)
+		{
+			fragment_view.setVisibility(View.GONE);
+			return;
+		}
+		super.onBackPressed();
+	}
 }

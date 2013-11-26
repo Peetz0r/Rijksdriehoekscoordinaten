@@ -7,14 +7,15 @@
         android:entries="@array/pref_format_entries"
         android:entryValues="@array/pref_format_entries"
         android:key="pref_format"
+        android:layout="@layout/preference_layout"
         android:title="@string/pref_format" />
-
     <ListPreference
         android:defaultValue="@string/pref_map_type_default"
         android:dialogTitle="@string/pref_map_type"
         android:entries="@array/pref_map_type_entries"
         android:entryValues="@array/pref_map_type_entries"
         android:key="pref_map_type"
+        android:layout="@layout/preference_layout"
         android:title="@string/pref_map_type" />
 
 </PreferenceScreen>

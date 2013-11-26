@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/fragment_sidebar"
-        android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDListFragment"
+        android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceFragment"
         android:layout_width="360dp"
         android:layout_height="match_parent" />
 
