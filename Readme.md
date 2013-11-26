@@ -20,7 +20,7 @@ Je kan coördinaten op de kaart zoeken, maar ook invullen in het tekstvak. Het i
 
 Het coördinatenstelsel heet Rijksdriehoek, en wordt onderhouden door het Kadaster. Deze coördinaten worden gebruikt op kaarten van de Topografische Dienst. Bij scoutinggroepen zijn deze kaarten bekend als stafkaart.
 
-![Screenshot](/Art/JB-landscape-luchtfoto-meridiaan_framed_medium.png)
+![Screenshot](/Art/JB-nexus4-landscape-luchtfoto-meridiaan_framed_medium.png)
 
 Meer informatie: [Wikipedia](http://nl.wikipedia.org/wiki/Rijksdriehoekscoördinaten) en [Scoutpedia](http://nl.scoutwiki.org/Rijksdriehoeksgrid).
 
