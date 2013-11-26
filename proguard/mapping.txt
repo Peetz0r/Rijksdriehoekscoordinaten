@@ -110,6 +110,7 @@ android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
     java.lang.String toString() -> toString
     android.support.v4.app.FragmentActivity getActivity() -> c
     android.content.res.Resources getResources() -> d
+    java.lang.String getString(int) -> a
     boolean isDetached() -> e
     void onHiddenChanged$1385ff() -> f
     void onActivityResult$6eb84b52() -> g
@@ -4154,7 +4155,6 @@ nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment -> nl.haas_en_berg.rijk
     android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
     boolean onOptionsItemSelected(android.view.MenuItem) -> a
     void formatUpdate() -> B
-    void mapTypeUpdate() -> C
     void onResume() -> m
     void onDestroy() -> o
     void onPause() -> n
@@ -4163,7 +4163,7 @@ nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment -> nl.haas_en_berg.rijk
     void access$0(nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment) -> a
     com.google.android.gms.maps.GoogleMap$OnCameraChangeListener access$1(nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment) -> b
     com.google.android.gms.maps.GoogleMap access$2(nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment) -> c
-    void access$3(nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment) -> d
+    android.content.SharedPreferences access$3(nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment) -> d
     android.widget.EditText access$4(nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment) -> e
     android.text.TextWatcher access$5(nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment) -> f
     android.widget.EditText access$6(nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment) -> g

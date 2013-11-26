@@ -293,7 +293,9 @@ com.google.android.gms.wallet.OfferWalletObject: android.os.Parcelable$Creator C
 com.google.android.gms.wallet.ProxyCard
 com.google.android.gms.wallet.ProxyCard: android.os.Parcelable$Creator CREATOR
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$array: int pref_format_entries
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$array: int pref_format_entry_values
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$array: int pref_map_type_entries
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$array: int pref_map_type_entry_values
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int adSize
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int adUnitId
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$attr: int cameraBearing
@@ -401,6 +403,7 @@ nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_servi
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_google_play_services_update_title
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_signin_button_text
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int common_signin_button_text_long
+nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int generic_error
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int pref_format
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int pref_format_default
 nl.haas_en_berg.rijksdriehoekscoordinaten.R$string: int pref_map_type

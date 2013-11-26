@@ -78,7 +78,6 @@ android.support.v4.app.Fragment:
     579:579:public final android.support.v4.app.Fragment getTargetFragment()
     586:586:public final int getTargetRequestCode()
     613:613:public final java.lang.CharSequence getText(int)
-    623:623:public final java.lang.String getString(int)
     636:636:public final varargs java.lang.String getString(int,java.lang.Object[])
     650:650:public final android.support.v4.app.FragmentManager getFragmentManager()
     658:670:public final android.support.v4.app.FragmentManager getChildFragmentManager()
