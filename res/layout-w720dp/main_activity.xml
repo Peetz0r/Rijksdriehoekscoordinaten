@@ -8,16 +8,16 @@
     android:orientation="horizontal" >
 
     <fragment
-        android:id="@+id/fragment_rd"
-        android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDFragment"
+        android:id="@+id/fragment_main"
+        android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDMainFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        tools:layout="@layout/fragment_rd" />
+        tools:layout="@layout/main_fragment" />
 
     <fragment
-        android:id="@+id/fragment_preferences"
-        android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDPreferenceFragment"
+        android:id="@+id/fragment_sidebar"
+        android:name="nl.haas_en_berg.rijksdriehoekscoordinaten.RDListFragment"
         android:layout_width="360dp"
         android:layout_height="match_parent" />
 

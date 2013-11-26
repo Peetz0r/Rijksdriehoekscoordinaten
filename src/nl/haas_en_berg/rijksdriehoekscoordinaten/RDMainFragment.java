@@ -1,8 +1,9 @@
 package nl.haas_en_berg.rijksdriehoekscoordinaten;
 
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.osgeo.proj4j.CRSFactory;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
@@ -20,35 +21,31 @@ import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.GoogleMap.OnCameraChangeListener;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-
-import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemSelectedListener;
 
-public class RDFragment extends Fragment
+public class RDMainFragment extends Fragment
 {
 	private MapView mapView = null;
 	private GoogleMap googleMap = null;
@@ -57,15 +54,6 @@ public class RDFragment extends Fragment
 	private CoordinateTransform wgs84_to_rd = null;
 	private CoordinateTransform rd_to_wgs84 = null;
 	private SharedPreferences prefs = null;
-	private Spinner spinner = null;
-	private ArrayAdapter<CharSequence> adapter = null;
-	
-	// private DecimalFormat decimalFormatter = new DecimalFormat("#.00");
-	// private double formatMultiplier = 1000;
-	
-	// private DecimalFormat decimalFormatter = new DecimalFormat("#");
-	// private double formatMultiplier = 1;
-	
 	private DecimalFormat decimalFormatter = null;
 	private double formatMultiplier = 0;
 	
@@ -73,11 +61,16 @@ public class RDFragment extends Fragment
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		View layoutView = inflater.inflate(R.layout.fragment_rd, container, false);
+		View layoutView = inflater.inflate(R.layout.main_fragment, container, false);
 		
+		// make the share button work
+		setHasOptionsMenu(true);
+		
+		// get user preferences
 		prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 		prefs.registerOnSharedPreferenceChangeListener(prefsListener);
 		
+		// set the DecimalFormatter and stuff using those preferences
 		formatUpdate();
 		
 		// find the MapView
@@ -154,36 +147,106 @@ public class RDFragment extends Fragment
 				googleMap.getUiSettings().setTiltGesturesEnabled(false);
 				googleMap.getUiSettings().setRotateGesturesEnabled(false);
 				
-				// populate the map type spinner
-				spinner = (Spinner) layoutView.findViewById(R.id.spinner);
-				adapter = ArrayAdapter.createFromResource(getActivity(), R.array.pref_map_type_entries, android.R.layout.simple_spinner_item);
-				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				spinner.setAdapter(adapter);
-				spinner.setOnItemSelectedListener(spinnerListener);
+				// get the default map type from the settings,
+				// and set in on the map
+				mapTypeUpdate();
 				
-				// get the default map type from the settings, and set in on the
-				// map and also set the position for the spinner.
-				String map_type = prefs.getString("pref_map_type", "");
-				mapTypeUpdate(map_type);
+				Intent intent = getActivity().getIntent();
 				
-				// get our 'last known' location
-				LocationManager lm = (LocationManager) getActivity().getSystemService(FragmentActivity.LOCATION_SERVICE);
-				Location myLocation = lm.getLastKnownLocation(lm.getBestProvider(new Criteria(), true));
+				// set m
+				LatLng startPosition = null;
+				float startZoom = 16;
 				
-				// myLocation can be null in all sorts of cases (cold boot,
-				// location stuff disabled by user, etc...)
-				if (myLocation != null)
+				try
 				{
-					LatLng myLatLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
-					googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myLatLng, 14));
+					Log.i("Peetz0r", intent.getAction().toString());
+					Log.i("Peetz0r", intent.getDataString().toString());
 				}
-				else
+				catch (Exception e)
 				{
-					// when there's not (yet) a myLocation available, then just
-					// set our start position to the OLV-toren because that's
-					// where the RD grid started after all
-					googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.1551723, 5.38720358), 14));
 				}
+				
+				// try to get a position from the Activity's Intent
+				if (intent.getAction().equals(Intent.ACTION_VIEW) || intent.getAction().equals(Intent.ACTION_SEND))
+				{
+					Uri uri = intent.getData();
+					// geo:52.39494397309149,5.2931031212210655?q=52.39494397309149%2C5.2931031212210655(148595%20-%20489682)&z=16
+					if (uri.getScheme().equals("geo"))
+					{
+						Pattern p = Pattern.compile("geo:(\\d+\\.\\d+),(\\d+\\.\\d+)(?:.*z=(\\d+))?");
+						Matcher m = p.matcher(uri.toString());
+						if (m.find())
+						{
+							try
+							{
+								startPosition = new LatLng(Double.valueOf(m.group(1)), Double.valueOf(m.group(2)));
+							}
+							catch (NumberFormatException e)
+							{
+								// This happens when other apps provide a
+								// invalid geo: URI. Let's ignore that
+							}
+							
+							// the z parameter in a geo: URI is optional,
+							// therefore group(3) may be null
+							String z = m.group(3);
+							if (z != null)
+							{
+								try
+								{
+									startZoom = Float.valueOf(z);
+								}
+								catch (NumberFormatException e)
+								{
+									// This, again, happens when other apps
+									// provide a invalid geo: URI. Let's, again,
+									// ignore that
+								}
+							}
+						}
+					}
+					else if (uri.getScheme().startsWith("http"))
+					{
+						Pattern p = Pattern.compile("loc:(\\d+\\.\\d+),(\\d+\\.\\d+)");
+						Matcher m = p.matcher(uri.toString());
+						if (m.find())
+						{
+							try
+							{
+								startPosition = new LatLng(Double.valueOf(m.group(1)), Double.valueOf(m.group(2)));
+							}
+							catch (NumberFormatException e)
+							{
+								// This happens when other apps provide a http
+								// URI that I don't really understand
+							}
+						}
+					}
+				}
+				
+				// when failed, try to get the last known location
+				if (startPosition == null)
+				{
+					LocationManager lm = (LocationManager) getActivity().getSystemService(FragmentActivity.LOCATION_SERVICE);
+					Location myLocation = lm.getLastKnownLocation(lm.getBestProvider(new Criteria(), true));
+					
+					// myLocation can be null in all sorts of cases (cold boot,
+					// location stuff disabled by user, etc...)
+					if (myLocation != null)
+					{
+						startPosition = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
+					}
+				}
+				
+				// when failed again, then just set our start position to the
+				// OLV-tower because that's where the RD grid started after all
+				if (startPosition == null)
+				{
+					startPosition = new LatLng(52.1551723, 5.38720358);
+				}
+				
+				// actually move the camera to the position that we just found
+				googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(startPosition, startZoom));
 				
 				// prepare the two CoordinateTransform objects to do the magic
 				// later on :)
@@ -200,6 +263,41 @@ public class RDFragment extends Fragment
 			}
 		}
 		return layoutView;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		if (item.getItemId() == R.id.action_share)
+		{
+			// get the position from the Google Map
+			LatLng pos = googleMap.getCameraPosition().target;
+			
+			// do the Proj4j magic
+			ProjCoordinate wgs84 = new ProjCoordinate(pos.longitude, pos.latitude);
+			ProjCoordinate rd = new ProjCoordinate();
+			wgs84_to_rd.transform(wgs84, rd);
+			
+			// set the label, according to the user preferences
+			String label = decimalFormatter.format(rd.x / formatMultiplier);
+			label += " - " + decimalFormatter.format(rd.y / formatMultiplier);
+			
+			// also prepare the wgs84 coordinates
+			String latlon = pos.latitude + "," + pos.longitude;
+			
+			// and the zoomlevel (rounded)
+			String zoom = String.format("%.0f", googleMap.getCameraPosition().zoom);
+			
+			// build the URI. it contains the wgs84 coordinates in the
+			// beginning, and again as part of the q= parameter
+			Uri uri = Uri.parse("geo:" + latlon + "?q=" + Uri.encode(latlon + "(" + label + ")") + "&z=" + zoom);
+			
+			// this gives the user a list of apps such as Google Maps
+			Intent shareIntent = new Intent(android.content.Intent.ACTION_VIEW, uri);
+			startActivity(shareIntent);
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 	
 	private void formatUpdate()
@@ -222,47 +320,29 @@ public class RDFragment extends Fragment
 		@Override
 		public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key)
 		{
-			Toast.makeText(getActivity(), "Hey! " + key, Toast.LENGTH_LONG).show();
-			
 			formatUpdate();
 			cameraListener.onCameraChange(googleMap.getCameraPosition());
 			
-			String map_type = prefs.getString("pref_map_type", "");
-			mapTypeUpdate(map_type);
+			mapTypeUpdate();
 		}
 	};
 	
-	private void mapTypeUpdate(String map_type)
+	private void mapTypeUpdate()
 	{
+		String map_type = prefs.getString("pref_map_type", "");
 		if (map_type.equals("Luchtfoto"))
 		{
 			googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-			spinner.setSelection(adapter.getPosition(map_type));
 		}
 		else if (map_type.equals("Topografisch"))
 		{
 			googleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-			spinner.setSelection(adapter.getPosition(map_type));
 		}
 		else
 		{
 			googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-			spinner.setSelection(0);
 		}
 	}
-	
-	private OnItemSelectedListener spinnerListener = new OnItemSelectedListener()
-	{
-		public void onItemSelected(android.widget.AdapterView<?> parent, View view, int pos, long id)
-		{
-			mapTypeUpdate(parent.getItemAtPosition(pos).toString());
-		}
-		
-		@Override
-		public void onNothingSelected(AdapterView<?> arg0)
-		{
-		};
-	};
 	
 	private OnCameraChangeListener cameraListener = new OnCameraChangeListener()
 	{

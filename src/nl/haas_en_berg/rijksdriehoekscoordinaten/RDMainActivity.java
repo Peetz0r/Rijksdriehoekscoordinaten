@@ -1,16 +1,13 @@
 package nl.haas_en_berg.rijksdriehoekscoordinaten;
 
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-public class RDActivity extends FragmentActivity
+public class RDMainActivity extends FragmentActivity
 {
 	View fragment_view = null;
 	
@@ -18,9 +15,9 @@ public class RDActivity extends FragmentActivity
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_rd);
+		setContentView(R.layout.main_activity);
 		
-		fragment_view = findViewById(R.id.fragment_preferences);
+		fragment_view = findViewById(R.id.fragment_sidebar);
 		if (fragment_view != null)
 		{
 			fragment_view.setVisibility(View.GONE);
@@ -39,7 +36,7 @@ public class RDActivity extends FragmentActivity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
-		if (item.getItemId() == R.id.action_settings)
+		if (item.getItemId() == R.id.action_preferences)
 		{
 			if (fragment_view != null)
 			{
@@ -61,10 +58,11 @@ public class RDActivity extends FragmentActivity
 			}
 			else
 			{
+				// FIXME: remove when dropping Gingerbread support sometime
 				Intent intent = new Intent(this, RDPreferenceActivity.class);
 				startActivity(intent);
-				
 			}
+			
 		}
 		return super.onOptionsItemSelected(item);
 	}

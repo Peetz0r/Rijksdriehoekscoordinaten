@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:background="#a040ffa0" />
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="#a040ffa0" />
+
+    <LinearLayout
+        android:id="@+id/RD_lon_bg"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ui_background"
+        android:orientation="vertical"
+        android:padding="12dp" >
+
+        <EditText
+            android:id="@+id/RD_lon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:digits="0123456789.,"
+            android:gravity="right"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/RD_lat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:digits="0123456789.,"
+            android:gravity="right"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
+    </LinearLayout>
+
+</FrameLayout>

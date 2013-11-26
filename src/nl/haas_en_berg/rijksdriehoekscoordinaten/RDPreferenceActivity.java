@@ -1,5 +1,7 @@
 package nl.haas_en_berg.rijksdriehoekscoordinaten;
 
+// FIXME: remove when dropping Gingerbread support sometime
+
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.v4.app.NavUtils;
@@ -13,17 +15,11 @@ public class RDPreferenceActivity extends PreferenceActivity
 	{
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.preferences);
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-	}
-	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
-		if (item.getItemId() == android.R.id.home)
-		{
-			NavUtils.navigateUpFromSameTask(this);
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+		// There's no getActionBar on 2.3, *AND* there's no PreferenceActivity
+		// in the support library, so there's also no way to have
+		// getSupportActionBar here.
+		
+		// we are not going to space today
+		// getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 }
