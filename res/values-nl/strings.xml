@@ -19,7 +19,7 @@
         <item>Kaart</item>
         <item>Luchtfoto</item>
         <item>Topografisch</item>
-        </string-array>
+    </string-array>
 
     <!-- Er zal geen ruimtereis plaatsvinden vandaag. -->
     <string name="generic_error">Er gaat iets mis.</string>
