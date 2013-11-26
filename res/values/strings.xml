@@ -5,20 +5,34 @@
     <string name="action_share">Share</string>
     <string name="action_preferences">Preferences</string>
     <string name="pref_format">Coordinate format</string>
-    <string name="pref_format_default">Scouting</string>
 
     <string-array name="pref_format_entries">
         <item>Scouting</item>
         <item>Kadaster</item>
     </string-array>
 
+    <!-- format: multiplier|DecimalFormatter formatstring -->
+    <string name="pref_format_default">1000|#.00</string>
+
+    <string-array name="pref_format_entry_values">
+        <item>1000|#.00</item> <!-- Scouting: 123,45 - 456,78 -->
+        <item>1|#</item> <!-- Kadaster: 123456 - 456789 -->
+    </string-array>
+
     <string name="pref_map_type">Map type</string>
-    <string name="pref_map_type_default">Map</string>
 
     <string-array name="pref_map_type_entries">
         <item>Map</item>
         <item>Aerial</item>
         <item>Terrain</item>
+    </string-array>
+
+    <string name="pref_map_type_default">1</string>
+
+    <string-array name="pref_map_type_entry_values">
+        <item>1</item> <!-- GoogleMap.MAP_TYPE_NORMAL -->
+        <item>4</item> <!-- GoogleMap.MAP_TYPE_HYRBID -->
+        <item>3</item> <!-- GoogleMap.MAP_TYPE_TERRAIN -->
     </string-array>
 
     <!-- You are not going to space today. -->

@@ -5,16 +5,16 @@
         android:defaultValue="@string/pref_format_default"
         android:dialogTitle="@string/pref_format"
         android:entries="@array/pref_format_entries"
-        android:entryValues="@array/pref_format_entries"
-        android:key="pref_format"
+        android:entryValues="@array/pref_format_entry_values"
+        android:key="pref_formatstring"
         android:layout="@layout/preference_layout"
         android:title="@string/pref_format" />
     <ListPreference
         android:defaultValue="@string/pref_map_type_default"
         android:dialogTitle="@string/pref_map_type"
         android:entries="@array/pref_map_type_entries"
-        android:entryValues="@array/pref_map_type_entries"
-        android:key="pref_map_type"
+        android:entryValues="@array/pref_map_type_entry_values"
+        android:key="pref_maptype"
         android:layout="@layout/preference_layout"
         android:title="@string/pref_map_type" />
 

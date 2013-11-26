@@ -148,14 +148,13 @@ public class RDMainFragment extends Fragment
 				
 				// get the default map type from the settings,
 				// and set in on the map
-				mapTypeUpdate();
+				googleMap.setMapType(Integer.parseInt(prefs.getString("pref_maptype", getString(R.string.pref_map_type_default))));
 				
-				Intent intent = getActivity().getIntent();
-				
-				// set m
 				LatLng startPosition = null;
 				float startZoom = 16;
 				
+				// try to figure out the start position from an Intent
+				Intent intent = getActivity().getIntent();
 				if (intent.getAction() != null && (intent.getAction().equals(Intent.ACTION_VIEW) || intent.getAction().equals(Intent.ACTION_SEND)))
 				{
 					Uri uri = intent.getData();
@@ -200,11 +199,7 @@ public class RDMainFragment extends Fragment
 						}
 						else
 						{
-							// This happens when other apps provide a
-							// invalid geo: URI. Ignoring this and
-							// displaying another location to the user might
-							// be confusing, so instead, we finish our
-							// Activity and inform the user
+							// This...user
 							Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 							getActivity().finish();
 						}
@@ -221,22 +216,14 @@ public class RDMainFragment extends Fragment
 							}
 							catch (NumberFormatException e)
 							{
-								// This happens when other apps provide a
-								// invalid geo: URI. Ignoring this and
-								// displaying another location to the user might
-								// be confusing, so instead, we finish our
-								// Activity and inform the user
+								// This...user
 								Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 								getActivity().finish();
 							}
 						}
 						else
 						{
-							// This happens when other apps provide a
-							// invalid geo: URI. Ignoring this and
-							// displaying another location to the user might
-							// be confusing, so instead, we finish our
-							// Activity and inform the user
+							// This...user
 							Toast.makeText(getActivity(), R.string.generic_error, Toast.LENGTH_LONG).show();
 							getActivity().finish();
 						}
@@ -321,17 +308,9 @@ public class RDMainFragment extends Fragment
 	
 	private void formatUpdate()
 	{
-		String format = prefs.getString("pref_format", "");
-		if (format.equals("Kadaster"))
-		{
-			decimalFormatter = new DecimalFormat("#");
-			formatMultiplier = 1;
-		}
-		else
-		{
-			decimalFormatter = new DecimalFormat("#.00");
-			formatMultiplier = 1000;
-		}
+		String format[] = prefs.getString("pref_formatstring", getString(R.string.pref_format_default)).split("\\|");
+		formatMultiplier = Double.parseDouble(format[0]);
+		decimalFormatter = new DecimalFormat(format[1]);
 	}
 	
 	private OnSharedPreferenceChangeListener prefsListener = new OnSharedPreferenceChangeListener()
@@ -342,26 +321,9 @@ public class RDMainFragment extends Fragment
 			formatUpdate();
 			cameraListener.onCameraChange(googleMap.getCameraPosition());
 			
-			mapTypeUpdate();
+			googleMap.setMapType(Integer.parseInt(prefs.getString("pref_maptype", getString(R.string.pref_map_type_default))));
 		}
 	};
-	
-	private void mapTypeUpdate()
-	{
-		String map_type = prefs.getString("pref_map_type", "");
-		if (map_type.equals("Luchtfoto"))
-		{
-			googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-		}
-		else if (map_type.equals("Topografisch"))
-		{
-			googleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-		}
-		else
-		{
-			googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-		}
-	}
 	
 	private OnCameraChangeListener cameraListener = new OnCameraChangeListener()
 	{
@@ -369,7 +331,6 @@ public class RDMainFragment extends Fragment
 		@Override
 		public void onCameraChange(CameraPosition cameraPosition)
 		{
-			
 			// disable the listener on the textWatcher
 			RD_lon.removeTextChangedListener(textWatcher);
 			RD_lat.removeTextChangedListener(textWatcher);
